@@ -8,20 +8,108 @@
     <title>Exam Management Information System</title>
 </head>
 <body>
+    <!-- Container for Navigation bar; header for homepage-->
     <header>
-        <nav>
-            <img src = "">
+        <nav id = "NavigationBar">
+            <img id = "LSBU_Logo" src = "{% static '../static/Images/LSBU-Logo_2023-v2.svg' %}">
             <!--The dropdown box below -->
             <ul class = "infoCon">
                 <li>Information</li>
                 <ul class = "infoDropdown">
-                    <li>Exam Rules</li>
-                    <li>General Exam Procedures</li>
+                    <li id = "Info_ER"><a href = "#ExamRulesCon">Exam Rules</a></li>
+                    <li id = "Info_GEP"><a href = "#General_ProceduresCon">General Exam Procedures</a></li>
                 </ul>
             </ul>
 
             <button id = "LoginB">Login</button>
         </nav>
     </header>
+
+    <section class = "sections" id = "TopCon">
+        <div class = "IntroCon">
+            <div class = "IntroCon_Subtext">
+
+                <div id = "TitleCon">LSBU Exam Management Information System</div>
+                <div id = "NoteTitle">This is the information page and contains:</div>
+
+                <ol class = "Note">
+                    <li class = "Note_Points">Rules for the students to know.</li>
+                    <li class = "Note_Points">Procedures to follow in exam conditions.</li>
+                </ol>
+
+            </div>
+
+            <img id = "HallImg" src = "{% static '../static/Images/exam-main-sports-hall_inline.jpg' %}">
+
+        </div>
+
+        <div class = "stu_invig_textCon">
+            <div id = "textConOne">
+                For Students: These rules and exam procedures are generalised, yet will prepare your mind for what to do when you arrive.
+            </div>
+
+            <div id = "textConTwo">
+                For Invigilators: Log in to see the <span id = "specific">specific</span> exam procedures.
+            </div>
+        </div>
+
+    </section>
+
+    <section class = "sections" id = "ExamRulesCon">
+        <div id = "RulesCon">
+            <div id = "RulesTitle">Exam Rules</div>
+        </div>
+
+        <div id = "RulesTextCon ">
+            <ol class = "RulesText">
+                <li id = "RTOne">No communication across to fellow students.</li>
+                <li id = "RTTwo">All phones and devices must be turned off and left in the bag.</li>
+                <li id = "RTThree">No eating during the exam.</li>
+                <li id = "RTFour">Ask an invigilator before going to the toilet.</li>
+                <li id = "RTFive">Whisper when communicating with invigilators.</li>
+            </ol>
+        </div>
+
+    </section>
+
+    <section class = "sections" id = "General_ProceduresCon">
+        <!-- GEP = General Exam Procedure; Con means Container -->
+        <div class = "GEP_Con">
+            <div id = "GEP_Title">General Exam Procedures</div>
+            <img id = "GEP_infograph" src = "{% static '../static/Images/checklist-online-3d-paper-form.webp' %}">
+        </div>
+
+        <div id = "RulesTextCon ">
+            <ol class = "RulesText">
+                <li id = "RTOne">A summary of the rules for examination candidates are displayed in every examination room.</li>
+                <li id = "RTTwo">Examination papers are prepared within the timetable set out in the assessment calendar approved by the Academic Board.</li>
+                <li id = "RTThree">The academic member of staff responsible for the examination paper is responsible for checking and certifying the accuracy of the final version of the paper.</li>
+                <li id = "RTFour"> No unauthorised member of staff can copy any papers before the day of the examination.</li>
+                <li id = "RTFive">If a student causes a disturbance, the invigilator will:
+
+                    <ul class = "RTFive_Sub">
+                        <li id = "RT_SubOne">Warn the student.</li>
+                        <li id = "RT_SubTwo">Require the student to withdraw (from exam hall) is he or she persists</li>7
+                        <li id = "RT_SubThree">Not re-admit, if the student is required to withdraw.</li>
+                        <li id = "RT_SubFour">Fill in the online exam report form, to note the circumstances of the exam, for the university</li>
+                    </ul>
+
+                </li>
+            </ol>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class = "homepageLinkCon">
+            <a href = "https://www.lsbu.ac.uk/" class = "homeFootLink">Back To LSBU Homepage</a>
+        </div>
+
+        <div>
+            &copy; London South Bank University
+        </div>
+    </footer>
+
+
 </body>
 </html>
