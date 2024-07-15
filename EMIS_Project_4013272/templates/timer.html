@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +25,10 @@
         </nav>
     </header>
 
-    <!-- Timer webpage will display the live exam, the live status, the timer and the exam rules -->
+    <!-- Timer webpage will display the live exam, the live status, the timer, exam rules and the exam report form -->
 
     <section class = "sections" id = "TopSection">
-        <div >Operating Systems</div>
+        <div class = "OS_Title" >Operating Systems</div>
         <div class = "status">Live Status: Commencing...</div>
 
         <!-- Below are the two circle icons to animate -- This would be my dynamic element -->
@@ -37,12 +39,52 @@
 
         <div class = "TimerCon">
             <div id = "TimerTitle">Countdown Timer</div>
-            <div></div>
+            <div class = "UnitWrap">
+                <div class = "NumWrap">
+                    <div class = "NumCon">00</div>
+                    <div class = "Num" id = "days">Days</div>
+                </div>
+
+                <div class = "NumWrap">
+                    <div class = "NumCon">00</div>
+                    <div class = "Num" id = "hours">Hours</div>
+                </div>
+
+                <div class = "NumWrap">
+                    <div class = "NumCon">00</div>
+                    <div class = "Num" id = "minutes">Minutes</div>
+                </div>
+
+                <div class = "NumWrap">
+                    <div class = "NumCon">00</div>
+                    <div class = "Num" id = "seconds">Seconds</div>
+                </div>
+            </div>
         </div>
 
     </section>
 
+    <section class = "sections" id = "ExamRulesSect">
+        <div class = "Title">Exam Rules</div>
+        <div class = "ER_Con">
+            <div class = "ER_Group" id = "ER_One">1. No toilet breaks, the first and last 30 minutes of the exam.</div>
+            <div class = "ER_Group" id = "ER_Two">2. All student devices are turned off and placed in their bags.</div>
+            <div class = "ER_Group" id = "ER_Three">3. No eating during the exam.</div>
+            <div class = "ER_Group" id = "ER_Four">4. Ask the invigilators for any concerns(e.g. before the toilet).</div>
+            <div class = "ER_Group" id = "ER_Five">5. Whisper when communicating with invigilators.</div>
+        </div>
+    </section>
 
+    <section class = "sections" id = "Exam_Report_Form">
+        <div class = "ExamReport_Title">Exam Report</div>
+        <div class = "EReport_Subtext">
+            This is an optional feedback form, to be filled in by invigilators, if they intend to do so.
+        </div>
+        
+        <form class = "ERep_FormCon" action = "/form_receipt" method="post">
+            <>
+        </form>
+    </section>
 
     <footer>
         <div class = "homepageLinkCon">

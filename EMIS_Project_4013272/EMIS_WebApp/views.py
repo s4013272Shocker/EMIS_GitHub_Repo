@@ -16,3 +16,7 @@ def login(request):
 
 def welcome(request):
     return render (request, "welcome.html")
+
+#This verifies that the exam report has been submitted.
+def form_receipt(request):
+    return render (request, "form_receipt.html")
