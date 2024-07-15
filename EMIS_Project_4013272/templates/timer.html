@@ -6,6 +6,54 @@
     <title>Exam Timer</title>
 </head>
 <body>
-    
+    <header>
+        <nav id = "NavigationBar">
+            <img id = "LSBU_Logo" src = "{% static '../static/Images/LSBU Logo.png' %}">
+            <!--The dropdown box below -->
+            <ul class = "infoCon">
+                <li>Information</li>
+                <ul class = "infoDropdown">
+                    <li id = "Info_ER"><a href = "/">Exam Rules</a></li>
+                    <li id = "Info_GEP"><a href = "/">General Exam Procedures</a></li>
+                </ul>
+                <li class = "ExamTopLink" ><a href = "/exam">Exam</a></li>
+            </ul>
+
+            <button id = "LoginB">Login</button>
+        </nav>
+    </header>
+
+    <!-- Timer webpage will display the live exam, the live status, the timer and the exam rules -->
+
+    <section class = "sections" id = "TopSection">
+        <div >Operating Systems</div>
+        <div class = "status">Live Status: Commencing...</div>
+
+        <!-- Below are the two circle icons to animate -- This would be my dynamic element -->
+        <div class = "Encircle_AnimCon">
+            <img src = "{% static '../static/Images/Yellow Circle.png' %}">
+            <img src = "{% static '../static/Images/Yellow Circle.png' %}">
+        </div>
+
+        <div class = "TimerCon">
+            <div id = "TimerTitle">Countdown Timer</div>
+            <div></div>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <div class = "homepageLinkCon">
+            <a href = "https://www.lsbu.ac.uk/" class = "homeFootLink">Back To LSBU Homepage</a>
+        </div>
+
+        <div>
+            &copy; London South Bank University
+        </div>
+    </footer>
+
+
 </body>
 </html>

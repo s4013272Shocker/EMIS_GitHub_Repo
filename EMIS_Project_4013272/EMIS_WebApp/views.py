@@ -10,3 +10,9 @@ def exam(request):
 
 def timer(request):
     return render (request, "timer.html")
+
+def login(request):
+    return render (request, "login.html")
+
+def welcome(request):
+    return render (request, "welcome.html")
