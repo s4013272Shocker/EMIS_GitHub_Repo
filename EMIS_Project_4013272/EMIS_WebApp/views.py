@@ -7,3 +7,6 @@ def index(request):
 
 def exam(request):
     return render (request, "exam.html")
+
+def timer(request):
+    return render (request, "timer.html")

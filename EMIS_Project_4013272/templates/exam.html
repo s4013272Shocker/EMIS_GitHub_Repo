@@ -42,19 +42,44 @@
 
     <section class = "sections" id = "Exam_Modules">
 
-        <!-- This will contain database dynamic data -->
-         <!-- Data will be extracted from the database to be presented as information for students to view on th epublic webpage. -->
-
-        <!-- Dynamic data variable will be contained in  this: {{}} -->
+        <!-- This will display the exam on the oublic page accessible for students and Invigilators -->
         <div class = "ModuleCon">
-            <img id = "Module_Img" src = {{}}>
+            <img id = "Module_Img" src = "{% static '../static/Images/computer-science.jpg' %}">
             <div class = "InfoCon">
-                <div id = "InfoTitle">Module Name: {{}}</div>
-                <div id = "InfoDate">Date: {{}}</div>
-                <div id = "InfoTime">Time Allocated: {{}}</div>
-                <div id = "InfoLoc">Location: {{}}</div>
+                <div id = "InfoTitle">
+                    <a href = "timer">Module Name: Operating System</a>
+                </div>
+                <div id = "InfoDate">Date: Monday 5th August 2024</div>
+                <div id = "InfoTime">Time Allocated: 2-4pm</div>
+                <div id = "InfoLoc">Location: Sports Hall</div>
             </div>
         </div>
+
+        <div class = "ModuleCon">
+            <img id = "Module_Img" src = "{% static '../static/Images/Biomedical Science.jpg' %}">
+            <div class = "InfoCon">
+                <div id = "InfoTitle">
+                    <a href = "#">Module Name: Cellular Pathology and Imaging</a>
+                </div>
+                <div id = "InfoDate">Date: Monday 5th August 2024</div>
+                <div id = "InfoTime">Time Allocated: 9-11am</div>
+                <div id = "InfoLoc">Location: Perry Building, 3rd Floor Computer Rooms.</div>
+            </div>
+        </div>
+
+        <div class = "ModuleCon">
+            <img id = "Module_Img" src = "../static/Images/Civil Engineering.jpeg">
+            <div class = "InfoCon">
+                <div id = "InfoTitle">
+                    <a href = "#">Module Name: Geotechnical Engineering</a>
+                </div>
+                <div id = "InfoDate">Date: Wednesday 7th August 2024</div>
+                <div id = "InfoTime">Time Allocated: 12-2pm</div>
+                <div id = "InfoLoc">Location: Faraday Building, Room 202.</div>
+            </div>
+        </div>
+
+
     </section>
 
 </body>
