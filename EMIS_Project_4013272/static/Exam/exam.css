@@ -110,10 +110,64 @@ header ul li:nth-child(4){
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
     padding: 4% 0 4% 0;
 }
 
+.TopText{
+    margin: 1.4% 0 1.4% 0;
+}
+
+.searchExamBar{
+    width: 60%;
+    padding: 2%;
+    background: rgb(42, 42, 42);
+    color: white;
+    border: none;
+    border-radius: var(--borderRadius);
+}
+
+/* Exam Modules */
+
+/* Only module with link to Exam Report and Timer is the Operating System */
+
+.ModuleCon{
+    margin: 4%;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--borderRadius);
+    background-color: var(--LightPurpleV1);
+}
+
+#Module_Img{
+    width: 30%;
+    border-radius: var(--borderRadius);
+}
+
+.InfoCon{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#InfoTitle{
+    margin-bottom: 4%;
+}
+
+#InfoTitle a{
+    font-size: 160%;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+#InfoTitle a:hover{
+    color: rgb(0, 0, 0);
+}
 
 
 /* Footer Styling */
