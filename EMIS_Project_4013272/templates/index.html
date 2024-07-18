@@ -5,27 +5,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type ="text/css" href = "{% static '../static/Homepage/style.css' %}" >
     <title>Exam Management Information System</title>
 </head>
 <body>
     <!-- Container for Navigation bar; header for homepage-->
     <header>
+
+        <ul>
+            <li>
+                <img id = "LSBU_Logo" src = "{% static '../static/Images/LSBU Logo.png' %}">
+            </li>
+
+            <li>
+                <a href = "#">Information ˅</a>
+                <ul class = "infoDropdown">
+                    <li id = "Info_ER"><a href = "#ExamRulesCon">Exam Rules</a></li>
+                    <li id = "Info_GEP"><a href = "#General_ProceduresCon">General Exam Procedures</a></li>
+                </ul>
+            </li>
+
+            <li class = "ExamTopLink">
+                <a href = "/exam">Exam</a>
+            </li>
+
+            <li>
+                <button id = "LoginB">Login</button>
+            </li>
+        </ul>
+
+        <!-- Version 1: Navbar; Abandoned due to a struggle to create a dropdown box, prior to doing research on creating a dropdown box... shown in version 2.-->
+
+        <!--
         <nav id = "NavigationBar">
             <img id = "LSBU_Logo" src = "{% static '../static/Images/LSBU Logo.png' %}">
-            <!--The dropdown box below -->
+             
+            The dropdown box below 
             <ul class = "infoCon">
                 <li>Information</li>
                 <ul class = "infoDropdown">
                     <li id = "Info_ER"><a href = "#ExamRulesCon">Exam Rules</a></li>
                     <li id = "Info_GEP"><a href = "#General_ProceduresCon">General Exam Procedures</a></li>
                 </ul>
-                <li class = "ExamTopLink" ><a href = "/exam">Exam</a></li>
+                <li class = "ExamTopLink"><a href = "/exam">Exam</a></li>
             </ul>
 
             <button id = "LoginB">Login</button>
-        </nav>
+        </nav> 
+        -->
+
     </header>
 
+    <!-- Top section of homepage- to instroduce users to the main purpose of the website -->
     <section class = "sections" id = "TopCon">
         <div class = "IntroCon">
             <div class = "IntroCon_Subtext">
@@ -45,29 +76,30 @@
         </div>
 
         <div class = "stu_invig_textCon">
-            <div id = "textConOne">
+            <div class = "textCon" id = "textConOne">
                 For Students: These rules and exam procedures are generalised, yet will prepare your mind for what to do when you arrive.
             </div>
 
-            <div id = "textConTwo">
+            <div  class = "textCon" id = "textConTwo">
                 For Invigilators: Log in to see the <span id = "specific">specific</span> exam procedures.
             </div>
         </div>
 
     </section>
 
+    <!-- Exam Rules section of the homepage -->
     <section class = "sections" id = "ExamRulesCon">
         <div id = "RulesCon">
             <div id = "RulesTitle">Exam Rules</div>
         </div>
 
-        <div id = "RulesTextCon ">
+        <div id = "RulesTextCon">
             <ol class = "RulesText">
-                <li id = "RTOne">No communication across to fellow students.</li>
-                <li id = "RTTwo">All phones and devices must be turned off and left in the bag.</li>
-                <li id = "RTThree">No eating during the exam.</li>
-                <li id = "RTFour">Ask an invigilator before going to the toilet.</li>
-                <li id = "RTFive">Whisper when communicating with invigilators.</li>
+                <li class = "RT" id = "RTOne">No communication across to fellow students.</li>
+                <li class = "RT" id = "RTTwo">All phones and devices must be turned off and left in the bag.</li>
+                <li class = "RT" id = "RTThree">No eating during the exam.</li>
+                <li class = "RT" id = "RTFour">Ask an invigilator before going to the toilet.</li>
+                <li class = "RT" id = "RTFive">Whisper when communicating with invigilators.</li>
             </ol>
         </div>
 
@@ -80,7 +112,7 @@
             <img id = "GEP_infograph" src = "{% static '../static/Images/checklist-online-3d-paper-form.webp' %}">
         </div>
 
-        <div id = "RulesTextCon ">
+        <div id = "RulesTextCon_GEP">
             <ol class = "RulesText">
                 <li id = "RTOne">A summary of the rules for examination candidates are displayed in every examination room.</li>
                 <li id = "RTTwo">Examination papers are prepared within the timetable set out in the assessment calendar approved by the Academic Board.</li>
@@ -90,7 +122,7 @@
 
                     <ul class = "RTFive_Sub">
                         <li id = "RT_SubOne">Warn the student.</li>
-                        <li id = "RT_SubTwo">Require the student to withdraw (from exam hall) is he or she persists</li>7
+                        <li id = "RT_SubTwo">Require the student to withdraw (from exam hall) is he or she persists</li>
                         <li id = "RT_SubThree">Not re-admit, if the student is required to withdraw.</li>
                         <li id = "RT_SubFour">Fill in the online exam report form, to note the circumstances of the exam, for the university</li>
                     </ul>

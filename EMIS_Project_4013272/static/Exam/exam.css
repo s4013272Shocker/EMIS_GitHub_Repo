@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --borderRadius: 12px;
+    --NavColour: rgb(36, 7, 85);
+    --LightPurpleV1: rgb(67, 14, 158);
+    --LightPurpleV2: rgb(104, 24, 241); /* nav button hover colour*/
+    --SubTFW: 500; /*Subtitle Font-Weight*/
+    --SubTFS: 140%; /* Subtitle Font-Size */
+
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+/* Navigation Bar */
+
+#LSBU_Logo{
+    width: 90%;
+    padding: 1%;
+    margin-left: 4%;
+}
+
+header ul li:nth-child(1){
+    margin: 1% 0 0 0;
+}
+
+header ul{
+    list-style: none;
+    background: var(--NavColour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 130%;
+}
+
+header ul li{
+    display: inline-block;
+    position: relative;
+}
+
+header ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+header ul li ul.infoDropdown{
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 5;
+    background: rgb(36, 7, 85);
+    border-radius: var(--borderRadius);
+}
+
+header ul li ul.infoDropdown li{
+    display: block;
+}
+
+header ul li a:hover{
+    background: rgb(67, 14, 158);
+    border-radius: var(--borderRadius);
+    border-bottom: 5px solid black;
+}
+
+header ul li:hover ul.infoDropdown{
+    display: block;
+    font-size: 70%;
+}
+
+#LoginB{
+    width: 100%;
+    padding: 5%;
+    font-size: 80%;
+    color: black;
+    border-radius: var(--borderRadius);
+    border: rgb(0, 0, 0) solid 3px;
+    background-color: silver;
+    transition: 0.7s ease-in-out;
+}
+
+#LoginB:hover{
+    background-color: black;
+    color: white;
+    border: var(--LightPurpleV2) solid 3px;
+    
+}
+
+header ul li:nth-child(4){
+    margin: 2%;
+    width: 15%;
+}
+
+
+/* Top Section of the Exam Page */
+#TopSect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    padding: 4% 0 4% 0;
+}
+
+
+
+/* Footer Styling */
+
+footer{
+    margin: 1%;
+    padding: 5%;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--NavColour);
+    color: white;
+    font-size: 110%;
+}
+
+.homeFootLink{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.homeFootLink:hover{
+    color: var(--LightPurpleV2);
+}

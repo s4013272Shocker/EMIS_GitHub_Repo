@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --borderRadius: 12px;
+    --NavColour: rgb(36, 7, 85);
+    --LightPurpleV1: rgb(67, 14, 158);
+    --LightPurpleV2: rgb(104, 24, 241); /* nav button hover colour*/
+    --SubTFW: 500; /*Subtitle Font-Weight*/
+    --SubTFS: 140%; /* Subtitle Font-Size */
+
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+/* Navigation Bar styling */
+
+
+/*Version 1 - Navigation Bar*/
+
+/*
+#NavigationBar{
+    background-color: rgb(36, 7, 85);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: red solid 5px;
+
+}
+
+#LSBU_Logo{
+    width: 19%;
+    padding: 1%;
+}
+
+.infoCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoDropdown{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    padding: 0 8% 0 8%;
+}
+*/
+
+/* Version 2 - Navigation Bar */
+
+#LSBU_Logo{
+    width: 90%;
+    padding: 1%;
+    margin-left: 4%;
+}
+
+header ul li:nth-child(1){
+    margin: 1% 0 0 0;
+}
+
+header ul{
+    list-style: none;
+    background: var(--NavColour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 130%;
+}
+
+header ul li{
+    display: inline-block;
+    position: relative;
+}
+
+header ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+header ul li ul.infoDropdown{
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 5;
+    background: rgb(36, 7, 85);
+    border-radius: var(--borderRadius);
+}
+
+header ul li ul.infoDropdown li{
+    display: block;
+}
+
+header ul li a:hover{
+    background: rgb(67, 14, 158);
+    border-radius: var(--borderRadius);
+    border-bottom: 5px solid black;
+}
+
+header ul li:hover ul.infoDropdown{
+    display: block;
+    font-size: 70%;
+}
+
+#LoginB{
+    width: 100%;
+    padding: 5%;
+    font-size: 80%;
+    color: black;
+    border-radius: var(--borderRadius);
+    border: rgb(0, 0, 0) solid 3px;
+    background-color: silver;
+    transition: 0.7s ease-in-out;
+}
+
+#LoginB:hover{
+    background-color: black;
+    color: white;
+    border: var(--LightPurpleV2) solid 3px;
+    
+}
+
+header ul li:nth-child(4){
+    margin: 2%;
+    width: 15%;
+}
+
+/* Top Section for LSBU EMIS brief intro text. */
+
+.IntroCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    border-radius: var(--borderRadius);
+}
+
+.IntroCon_Subtext{
+    background-color: var(--LightPurpleV1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    border-radius: var(--borderRadius);
+}
+
+#TitleCon{
+    font-size: 200%;
+    font-weight: 700;
+}
+
+#NoteTitle{
+    font-size: 140%;
+    font-weight: 500;
+    margin: 2% 0 3% 0;
+}
+
+#HallImg{
+    width: 35.5%;
+    margin: 3%;
+    border-radius: 12px;
+}
+
+
+.Note{
+    margin: 0 0 0 4%;
+    width: 100%;
+}
+
+.Note_Points{
+    margin: 2%;
+}
+
+.stu_invig_textCon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5%;
+    /*border: red solid 5px;*/ 
+}
+
+.textCon{
+    margin: 1.7%;
+}
+
+#specific{
+    font-weight: 700;
+    letter-spacing: 7px;
+}
+
+
+/* Exam Rules section styling*/
+
+#ExamRulesCon{
+    padding: 4% 0 20% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../Images/blackboard-know-the-rules-pixabay-850-2019.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#RulesCon{
+    margin: 3%;
+    border-radius: var(--borderRadius);
+    background-color: var(--LightPurpleV1);
+    color: white;
+    padding: 3%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 140%;
+}
+
+#RulesTextCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.RulesText{
+    padding: 2% 8% 2% 8%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(116, 115, 115, 0.845);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 0 4px 5px purple;
+}
+
+/* Line by line content, individually but also collectively. The "RT" class is applied to all the Rules. */
+.RT{
+    margin: 3%;
+}
+
+/* General Procedures section styling */
+
+#General_ProceduresCon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.GEP_Con{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 3% 0;
+}
+
+#GEP_Title{
+    margin: 1% 3% 1% 0;
+    border-radius: var(--borderRadius);
+    background-color: var(--LightPurpleV1);
+    color: white;
+    padding: 4.3% ;
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 140%;
+}
+
+#GEP_infograph{
+    border-radius: var(--borderRadius);
+    width: 12%;
+    margin: 1% 3% 1% 0; 
+}
+
+
+#RulesTextCon_GEP{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4%;
+}
+
+/* Footer Styling */
+
+footer{
+    margin: 1%;
+    padding: 5%;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--NavColour);
+    color: white;
+    font-size: 110%;
+}
+
+.homeFootLink{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.homeFootLink:hover{
+    color: var(--LightPurpleV2);
+}
+

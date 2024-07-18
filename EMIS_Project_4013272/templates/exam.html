@@ -4,14 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type ="text/css" href = "{% static '../static/Exam/exam.css' %}">
     <title>Exam List</title>
 </head>
 <body>
     <!-- Container for Navigation bar; header for homepage-->
     <header>
+
+        <ul>
+            <li>
+                <img id = "LSBU_Logo" src = "{% static '../static/Images/LSBU Logo.png' %}">
+            </li>
+
+            <li>
+                <a href = "#">Information ˅</a>
+                <ul class = "infoDropdown">
+                    <li id = "Info_ER"><a href = "/">Exam Rules</a></li>
+                    <li id = "Info_GEP"><a href = "/">General Exam Procedures</a></li>
+                </ul>
+            </li>
+
+            <li class = "ExamTopLink">
+                <a href = "/exam">Exam</a>
+            </li>
+
+            <li>
+                <button id = "LoginB">Login</button>
+            </li>
+        </ul>
+
+        <!--
         <nav id = "NavigationBar">
             <img id = "LSBU_Logo" src = "{% static '../static/Images/LSBU Logo.png' %}">
-            <!--The dropdown box below -->
+            <The dropdown box below - Comment>
             <ul class = "infoCon">
                 <li>Information</li>
                 <ul class = "infoDropdown">
@@ -24,6 +49,7 @@
 
             <button id = "LoginB">Login</button>
         </nav>
+        -->
     </header>
 
     <section class = "sections" id = "TopSect">
