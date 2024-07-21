@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --borderRadius: 12px;
+    --NavColour: rgb(36, 7, 85);
+    --LightPurpleV1: rgb(67, 14, 158);
+    --LightPurpleV2: rgb(104, 24, 241); /* nav button hover colour*/
+    --TitleFontSize: 180%;
+    --FormInputSize: 85%;
+    --SubTFW: 500; /*Subtitle Font-Weight*/
+    --SubTFS: 140%; /* Subtitle Font-Size */
+
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+/* Navigation Bar */
+
+#LSBU_Logo{
+    width: 90%;
+    padding: 1%;
+    margin-left: 4%;
+}
+
+header ul li:nth-child(1){
+    margin: 1% 0 0 0;
+}
+
+header ul{
+    list-style: none;
+    background: var(--NavColour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 130%;
+}
+
+header ul li{
+    display: inline-block;
+    position: relative;
+}
+
+header ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+header ul li ul.infoDropdown{
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 5;
+    background: rgb(36, 7, 85);
+    border-radius: var(--borderRadius);
+}
+
+header ul li ul.infoDropdown li{
+    display: block;
+}
+
+header ul li a:hover{
+    background: rgb(67, 14, 158);
+    border-radius: var(--borderRadius);
+    border-bottom: 5px solid black;
+}
+
+header ul li:hover ul.infoDropdown{
+    display: block;
+    font-size: 70%;
+}
+
+#LoginB{
+    width: 100%;
+    padding: 5%;
+    font-size: 80%;
+    color: black;
+    border-radius: var(--borderRadius);
+    border: rgb(0, 0, 0) solid 3px;
+    background-color: silver;
+    transition: 0.7s ease-in-out;
+}
+
+#LoginB:hover{
+    background-color: black;
+    color: white;
+    border: var(--LightPurpleV2) solid 3px;
+    
+}
+
+header ul li:nth-child(4){
+    margin: 2%;
+    width: 15%;
+}
+
+/* Module name, dynamic content and timer. */
+
+#TopSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.OS_Title{
+    font-size: 220%;
+    margin-top: 4%;
+}
+
+
+.status{
+    margin-top: 4%;
+    font-size: var(--SubTFS);
+}
+
+/* Yellow circle animation styling.*/
+
+.Encircle_AnimCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*margin: 7% 0 7% 0;*/
+    padding: 7% 0 7% 0;
+    /*margin-bottom: 5%;*/
+    width: 100%;
+    /*border: teal solid 4px;*/
+}
+
+.Encircle_AnimCon img{
+    padding: 0 0% 0 0%;
+    /*border: brown solid 2px;*/
+    animation-name: Encircle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    /*position: relative;*/
+}
+
+@keyframes Encircle{
+    0%{
+        margin: 0 1.2% 0 1.2%;
+    }
+
+    25%{
+        margin: 0% 5% 0 0;
+    }
+
+    50%{
+        margin: 0 0 0 8%;
+    }
+
+    75%{
+        margin: 0 5% 0 0;
+    }
+
+    100%{
+        margin: 0 1.2% 0 1.2%;
+    }
+}
+
+
+
+.TimerCon{
+    margin-top: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#TimerTitle{
+    font-size: 130%;
+    margin-bottom: 1.5%;
+}
+
+.UnitWrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 0 4% 0;
+    width: 65%;
+    background-color: var(--LightPurpleV1);
+    border-radius: var(--borderRadius);
+}
+
+
+.NumWrap{
+    margin: 0 3% 0 3%;
+}
+
+.NumCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 410%;
+    background-color: white;
+    border-radius: var(--borderRadius);
+    padding: 7%;
+}
+
+.Num{
+    font-size: 230%;
+    color: white;
+}
+
+/* Exam Rules Section, this would be displayed live in the exam hall, theoretically. */
+
+#ExamRulesSect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 0 4% 0;
+}
+
+.Title{
+    font-size: var(--TitleFontSize);
+    margin-bottom: 2.4%;
+}
+
+.ER_Con{
+    padding: 1%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ER_Group{
+    color: white;
+    background-color: black;
+    border-radius: var(--borderRadius);
+    width: 30%;
+    padding: 3%;
+    margin: 3%;
+}
+
+/* Exam Report Section */
+
+#Exam_Report_Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExamReport_Title{
+    font-size: var(--TitleFontSize);
+    margin-bottom: 2.4%;
+}
+
+.EReport_Subtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2% 0 2% 0;
+}
+
+.ERep_FormCon{
+    background-color: var(--LightPurpleV1);
+    border-radius: var(--borderRadius);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    margin-bottom: 4% ;
+}
+
+.formLabel{
+    font-size: 140%;
+    /*border:brown solid 2px;*/
+    margin: 4% 0 2% 0;
+}
+
+.inputBox{
+    border-radius: var(--borderRadius);
+    border: white solid 2px;
+    background: rgb(67, 67, 67);
+    padding: 5%;
+    width: 80%;
+    font-size: 85%;
+    color: white;
+}
+
+
+#queries{
+    padding: 15% 5% 15% 5%;
+}
+
+
+
+#formSubmit{
+    margin: 7% 0 2% 0;
+    border-radius: var(--borderRadius);
+    border: rgb(0, 0, 0,0) solid 3px; 
+    background-color: var(--NavColour);
+    color: white; 
+    width: 27%;
+    padding: 4%;
+    font-size: var(--FormInputSize);
+    transition: 0.5s ease-in-out;
+}
+
+#formSubmit:hover{
+    border: grey solid 3px;
+}
+
+
+/* Footer Styling */
+
+footer{
+    margin: 1%;
+    padding: 5%;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--NavColour);
+    color: white;
+    font-size: 110%;
+}
+
+.homeFootLink{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.homeFootLink:hover{
+    color: var(--LightPurpleV2);
+}
