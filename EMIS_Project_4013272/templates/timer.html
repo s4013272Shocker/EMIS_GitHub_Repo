@@ -66,22 +66,22 @@
             <div id = "TimerTitle">Countdown Timer</div>
             <div class = "UnitWrap">
                 <div class = "NumWrap">
-                    <div class = "NumCon">00</div>
+                    <div class = "NumCon" id = "daysUpdate">00</div>
                     <div class = "Num" id = "days">Days</div>
                 </div>
 
                 <div class = "NumWrap">
-                    <div class = "NumCon">00</div>
+                    <div class = "NumCon" id = "hoursUpdate">00</div>
                     <div class = "Num" id = "hours">Hours</div>
                 </div>
 
                 <div class = "NumWrap">
-                    <div class = "NumCon">00</div>
+                    <div class = "NumCon" id = "minutesUpdate">00</div>
                     <div class = "Num" id = "minutes">Minutes</div>
                 </div>
 
                 <div class = "NumWrap">
-                    <div class = "NumCon">00</div>
+                    <div class = "NumCon" id = "secondsUpdate">00</div>
                     <div class = "Num" id = "seconds">Seconds</div>
                 </div>
             </div>
@@ -129,6 +129,7 @@
         </div>
     </footer>
 
+    <script src = "{% static '../static/Timer/timer.js' %}"></script>
 
 </body>
 </html>
