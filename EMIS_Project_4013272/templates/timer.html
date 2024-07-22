@@ -107,6 +107,7 @@
         </div>
         
         <form class = "ERep_FormCon" action = "/form_receipt" method="post">
+            {% csrf_token %}
             <label for = "module" class = "formLabel" id = "module">Module Name</label><br>
             <input class = "inputBox" id = "module" name = "module" placeholder = "Enter Exam Module Name...">
             <label for = "queries" class = "formLabel" id = "queriesLabel">
