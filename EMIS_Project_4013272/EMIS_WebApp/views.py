@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import ExamReport
 
+
 # Create your views here.
 
 def index(request):
@@ -10,7 +11,7 @@ def exam(request):
     return render (request, "exam.html")
 
 def timer(request):
-    if request == "POST":
+    if request.method == "POST":
         ExamReport.moduleName = request.POST["module"]
         ExamReport.reportText = request.POST["queries"]
         ExamReport.save()

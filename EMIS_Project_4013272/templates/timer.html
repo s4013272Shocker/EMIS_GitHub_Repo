@@ -106,18 +106,18 @@
             This is an optional feedback form, to be filled in by invigilators, if they intend to do so.
         </div>
         
-        <form class = "ERep_FormCon" action = "/form_receipt" method="post">
+        <form class = "ERep_FormCon" action = "/timer" method="POST">
             {% csrf_token %}
             <label for = "module" class = "formLabel" id = "module">Module Name</label><br>
-            <input class = "inputBox" id = "module" name = "module" placeholder = "Enter Exam Module Name...">
+            <input type = "text" class = "inputBox" id = "module" name = "module" placeholder = "Enter Exam Module Name...">
             <label for = "queries" class = "formLabel" id = "queriesLabel">
                 Queries, questions or other statements to report
             </label><br>
-            <input class = "inputBox" id = "queries" name = "queries" placeholder = "Type your report here...">
+            <input type = "text" class = "inputBox" id = "queries" name = "queries" placeholder = "Type your report here...">
 
             <button id = "formSubmit" type ="submit">Submit</button>
         </form>
-
+        
     </section>
 
     <footer>
